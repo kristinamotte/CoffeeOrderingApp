@@ -51,7 +51,7 @@ struct OrderListView: View {
                 .border(Color(CGColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1)), width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
                 .cornerRadius(2.0)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-                .padding([.leading, .trailing], 16)
+                .padding([.leading, .trailing, .bottom], 16)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             .listRowInsets(EdgeInsets())
