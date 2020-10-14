@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var orderListViewModel = OrderListViewModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            OrderListView(orders: orderListViewModel.orders)
+                .navigationBarTitle("Coffe Orders")
+                .padding([.top], 16)
+        }
     }
 }
 
