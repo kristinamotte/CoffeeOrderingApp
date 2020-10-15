@@ -16,6 +16,7 @@
 		2BFAA37425275D1B00E872FE /* CoffeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA37325275D1B00E872FE /* CoffeeService.swift */; };
 		2BFAA3792527603A00E872FE /* OrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA3782527603A00E872FE /* OrderListViewModel.swift */; };
 		2BFAA37E2537497000E872FE /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA37D2537497000E872FE /* OrderListView.swift */; };
+		2BFAA3892538D22A00E872FE /* CreateOrderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA3882538D22A00E872FE /* CreateOrderResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2BFAA37325275D1B00E872FE /* CoffeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeService.swift; sourceTree = "<group>"; };
 		2BFAA3782527603A00E872FE /* OrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewModel.swift; sourceTree = "<group>"; };
 		2BFAA37D2537497000E872FE /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
+		2BFAA3882538D22A00E872FE /* CreateOrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				2BFAA36B2527595F00E872FE /* Coffee.swift */,
 				2BFAA36F25275B8C00E872FE /* Order.swift */,
+				2BFAA3882538D22A00E872FE /* CreateOrderResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				2BFAA35D252751FA00E872FE /* ContentView.swift in Sources */,
 				2BFAA35B252751FA00E872FE /* CoffeAppApp.swift in Sources */,
 				2BFAA37025275B8C00E872FE /* Order.swift in Sources */,
+				2BFAA3892538D22A00E872FE /* CreateOrderResponse.swift in Sources */,
 				2BFAA37E2537497000E872FE /* OrderListView.swift in Sources */,
 				2BFAA3792527603A00E872FE /* OrderListViewModel.swift in Sources */,
 				2BFAA36C2527595F00E872FE /* Coffee.swift in Sources */,
