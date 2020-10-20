@@ -24,6 +24,8 @@ struct Theme {
         static let largePadding: CGFloat = 24
         static let hugePadding: CGFloat = 100
         static let defaultCornerRadius: CGFloat = 4
+        static let orderCardCornerRadius: CGFloat = 2
+        static let borderWidth: CGFloat = 1
         
         static let defaultBodyTextSize: CGFloat = 16
         static let defaultTitleTextSize: CGFloat = 24

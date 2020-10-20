@@ -48,8 +48,8 @@ struct OrderListView: View {
                     
                     Spacer()
                 }
-                .border(Theme.Colors.darkGrey, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                .cornerRadius(Theme.Dimensions.defaultCornerRadius)
+                .border(Theme.Colors.darkGrey, width: Theme.Dimensions.borderWidth)
+                .cornerRadius(Theme.Dimensions.orderCardCornerRadius)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
                 .padding([.leading, .trailing, .bottom], Theme.Dimensions.mediumPadding)
             }

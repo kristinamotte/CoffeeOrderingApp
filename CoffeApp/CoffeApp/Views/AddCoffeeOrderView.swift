@@ -58,6 +58,7 @@ struct AddCoffeeOrderView: View {
                     .background(addCoffeeOrderViewModel.canPlaceOrder() ? Theme.Colors.violet : Theme.Colors.grey)
                     .cornerRadius(Theme.Dimensions.defaultCornerRadius)
                 }
+                .padding([.bottom], Theme.Dimensions.mediumPadding)
                 Spacer()
             }
             .navigationBarTitle(Constants.viewTitle)
