@@ -9,10 +9,7 @@ import SwiftUI
 
 struct AddCoffeeOrderView: View {
     @ObservedObject private var addCoffeeOrderViewModel = AddCoffeOrderViewModel()
-    
-    init() {
-        UITableView.appearance().backgroundColor = UIColor(cgColor: CGColor(red: 0.942, green: 0.958, blue: 1, alpha: 1))
-        }
+    @Binding var isPresented: Bool
 
     var body: some View {
         NavigationView {
@@ -28,7 +25,7 @@ struct AddCoffeeOrderView: View {
                         }
                     }
                     
-                    Section(header: Text("Select size").font(.body), footer: Text("Total")) {
+                    Section(header: Text("Select size").font(.body), footer: OrderTotalView(total: addCoffeeOrderViewModel.total)) {
                         Picker("", selection: $addCoffeeOrderViewModel.size) {
                             Text("Small").tag("Small")
                             Text("Medium").tag("Medium")
@@ -37,17 +34,21 @@ struct AddCoffeeOrderView: View {
                         .pickerStyle(SegmentedPickerStyle())
                     }
                 }
+                .padding([.top], 12)
                 
                 HStack {
                     Button("Place order") {
-                        
+                        addCoffeeOrderViewModel.placeOrder()
+                        isPresented = false
                     }
                     .padding(EdgeInsets(top: 16, leading: 100, bottom: 16, trailing: 100))
                     .foregroundColor(Color.white)
                     .background(Color(CGColor(red: 0.221, green: 0.439, blue: 1, alpha: 1)))
                     .cornerRadius(4.0)
                 }
+                Spacer()
             }
+            .background(Color(CGColor(red: 0.942, green: 0.958, blue: 1, alpha: 1)))
             .navigationBarTitle("Add Order")
         }
     }
@@ -55,6 +56,6 @@ struct AddCoffeeOrderView: View {
 
 struct AddCoffeeOrderView_Previews: PreviewProvider {
     static var previews: some View {
-        AddCoffeeOrderView()
+        AddCoffeeOrderView(isPresented: .constant(false))
     }
 }

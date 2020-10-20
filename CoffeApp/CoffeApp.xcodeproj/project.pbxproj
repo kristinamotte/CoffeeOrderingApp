@@ -21,6 +21,8 @@
 		2BFAA38F2538D5D400E872FE /* CoffeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA38E2538D5D400E872FE /* CoffeeListViewModel.swift */; };
 		2BFAA393253DF89400E872FE /* AddCoffeeOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA392253DF89400E872FE /* AddCoffeeOrderView.swift */; };
 		2BFAA397253E051200E872FE /* CoffeeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA396253E051200E872FE /* CoffeeCellView.swift */; };
+		2BFAA39B253ECD3800E872FE /* OrderTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA39A253ECD3800E872FE /* OrderTotalView.swift */; };
+		2BFAA39E253ED4E800E872FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA39D253ED4E800E872FE /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		2BFAA38E2538D5D400E872FE /* CoffeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListViewModel.swift; sourceTree = "<group>"; };
 		2BFAA392253DF89400E872FE /* AddCoffeeOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderView.swift; sourceTree = "<group>"; };
 		2BFAA396253E051200E872FE /* CoffeeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCellView.swift; sourceTree = "<group>"; };
+		2BFAA39A253ECD3800E872FE /* OrderTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTotalView.swift; sourceTree = "<group>"; };
+		2BFAA39D253ED4E800E872FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 				2BFAA35E252751FB00E872FE /* Assets.xcassets */,
 				2BFAA363252751FB00E872FE /* Info.plist */,
 				2BFAA360252751FB00E872FE /* Preview Content */,
+				2BFAA39D253ED4E800E872FE /* AppDelegate.swift */,
 			);
 			path = CoffeApp;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				2BFAA396253E051200E872FE /* CoffeeCellView.swift */,
+				2BFAA39A253ECD3800E872FE /* OrderTotalView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -212,7 +218,9 @@
 				2BFAA393253DF89400E872FE /* AddCoffeeOrderView.swift in Sources */,
 				2BFAA35B252751FA00E872FE /* CoffeAppApp.swift in Sources */,
 				2BFAA38F2538D5D400E872FE /* CoffeeListViewModel.swift in Sources */,
+				2BFAA39E253ED4E800E872FE /* AppDelegate.swift in Sources */,
 				2BFAA38C2538D46200E872FE /* AddCoffeOrderViewModel.swift in Sources */,
+				2BFAA39B253ECD3800E872FE /* OrderTotalView.swift in Sources */,
 				2BFAA37025275B8C00E872FE /* Order.swift in Sources */,
 				2BFAA397253E051200E872FE /* CoffeeCellView.swift in Sources */,
 				2BFAA3892538D22A00E872FE /* CreateOrderResponse.swift in Sources */,
