@@ -40,10 +40,10 @@ struct AddCoffeeOrderView: View {
                     Button("Place order") {
                         addCoffeeOrderViewModel.placeOrder()
                         isPresented = false
-                    }
+                    }.disabled(!addCoffeeOrderViewModel.canPlaceOrder())
                     .padding(EdgeInsets(top: 16, leading: 100, bottom: 16, trailing: 100))
                     .foregroundColor(Color.white)
-                    .background(Color(CGColor(red: 0.221, green: 0.439, blue: 1, alpha: 1)))
+                    .background(addCoffeeOrderViewModel.canPlaceOrder() ? Color(CGColor(red: 0.221, green: 0.439, blue: 1, alpha: 1)) : Color.gray)
                     .cornerRadius(4.0)
                 }
                 Spacer()

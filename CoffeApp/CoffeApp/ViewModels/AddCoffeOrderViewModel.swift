@@ -26,6 +26,13 @@ class AddCoffeOrderViewModel: ObservableObject {
         return calculateTotalPrice()
     }
     
+    func canPlaceOrder()  -> Bool {
+        if name.isEmpty || coffeName.isEmpty {
+            return false
+        }
+        return true
+    }
+    
     func placeOrder() {
         let order = Order(name: name, coffeeName: coffeName, total: total, size: size)
         coffeeService.createCoffeOrder(order: order) { _ in }
