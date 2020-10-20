@@ -23,6 +23,7 @@
 		2BFAA397253E051200E872FE /* CoffeeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA396253E051200E872FE /* CoffeeCellView.swift */; };
 		2BFAA39B253ECD3800E872FE /* OrderTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA39A253ECD3800E872FE /* OrderTotalView.swift */; };
 		2BFAA39E253ED4E800E872FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA39D253ED4E800E872FE /* AppDelegate.swift */; };
+		2BFAA3A4253F557900E872FE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFAA3A3253F557900E872FE /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		2BFAA396253E051200E872FE /* CoffeeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCellView.swift; sourceTree = "<group>"; };
 		2BFAA39A253ECD3800E872FE /* OrderTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTotalView.swift; sourceTree = "<group>"; };
 		2BFAA39D253ED4E800E872FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BFAA3A3253F557900E872FE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		2BFAA359252751FA00E872FE /* CoffeApp */ = {
 			isa = PBXGroup;
 			children = (
+				2BFAA3A2253F556E00E872FE /* Theme */,
 				2BFAA37C2537490700E872FE /* Views */,
 				2BFAA3772527601100E872FE /* ViewModels */,
 				2BFAA37225275CFC00E872FE /* Services */,
@@ -143,6 +146,14 @@
 				2BFAA39A253ECD3800E872FE /* OrderTotalView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2BFAA3A2253F556E00E872FE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				2BFAA3A3253F557900E872FE /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 				2BFAA3892538D22A00E872FE /* CreateOrderResponse.swift in Sources */,
 				2BFAA37E2537497000E872FE /* OrderListView.swift in Sources */,
 				2BFAA3792527603A00E872FE /* OrderListViewModel.swift in Sources */,
+				2BFAA3A4253F557900E872FE /* Theme.swift in Sources */,
 				2BFAA36C2527595F00E872FE /* Coffee.swift in Sources */,
 				2BFAA37425275D1B00E872FE /* CoffeeService.swift in Sources */,
 			);

@@ -20,38 +20,38 @@ struct OrderListView: View {
                 HStack {
                     Image(order.coffeeName)
                         .resizable()
-                        .frame(width: 70, height: 70)
-                        .padding([.leading, .bottom, .top], 24)
+                        .frame(width: Theme.Dimensions.coffeeImageSize, height: Theme.Dimensions.coffeeImageSize)
+                        .padding([.leading, .bottom, .top], Theme.Dimensions.largePadding)
                     
                     VStack(alignment: .leading) {
                         Text(order.name)
-                            .font(.system(size: 24))
+                            .font(.system(size: Theme.Dimensions.defaultTitleTextSize))
                             .bold()
                         
                         HStack {
                             Text(order.size)
-                                .padding(EdgeInsets(top: 5, leading: 8, bottom: 5, trailing: 8))
-                                .background(Color(CGColor(red: 0.28, green: 0.613, blue: 0.921, alpha: 1)))
+                                .padding(EdgeInsets(top: Theme.Dimensions.smallPadding, leading: Theme.Dimensions.smallPadding, bottom: Theme.Dimensions.smallPadding, trailing: Theme.Dimensions.smallPadding))
+                                .background(Theme.Colors.lightBlue)
                                 .foregroundColor(.white)
-                                .cornerRadius(4.0)
+                                .cornerRadius(Theme.Dimensions.defaultCornerRadius)
 
                             Text(order.coffeeName)
-                                .padding(EdgeInsets(top: 5, leading: 8, bottom: 5, trailing: 8))
-                                .background(Color(CGColor(red: 0.359, green: 0.523, blue: 0.946, alpha: 1)))
+                                .padding(EdgeInsets(top: Theme.Dimensions.smallPadding, leading: Theme.Dimensions.smallPadding, bottom: Theme.Dimensions.smallPadding, trailing: Theme.Dimensions.smallPadding))
+                                .background(Theme.Colors.lightViolet)
                                 .foregroundColor(.white)
-                                .cornerRadius(4.0)
+                                .cornerRadius(Theme.Dimensions.defaultCornerRadius)
 
                         }
                     }
-                    .padding([.bottom, .top], 24)
-                    .padding([.leading], 16)
+                    .padding([.bottom, .top], Theme.Dimensions.largePadding)
+                    .padding([.leading], Theme.Dimensions.mediumPadding)
                     
                     Spacer()
                 }
-                .border(Color(CGColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1)), width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                .cornerRadius(2.0)
+                .border(Theme.Colors.darkGrey, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                .cornerRadius(Theme.Dimensions.defaultCornerRadius)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-                .padding([.leading, .trailing, .bottom], 16)
+                .padding([.leading, .trailing, .bottom], Theme.Dimensions.mediumPadding)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
             .listRowInsets(EdgeInsets())

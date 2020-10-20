@@ -13,11 +13,11 @@ struct OrderTotalView: View {
     var body: some View {
         HStack(alignment: .center)  {
             Spacer()
-            Text(String(format: "$%.2f", total))
+            Text(String(format: Theme.Constants.priceFormatting, total))
                 .font(.title)
                 .bold()
             Spacer()
-        }.padding(12)
+        }.padding(Theme.Dimensions.mediumPadding)
     }
 }
 

@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct AddCoffeeOrderView: View {
+    struct Constants {
+        static let informationSectionTitle: String  = "Information"
+        static let informationPlaceholder: String = "Enter name"
+        static let selectCoffeeTitle: String = "Select your coffee"
+        static let selectSizeTitle: String = "Select size"
+        static let smallSize: String = "Small"
+        static let mediumSize: String = "Medium"
+        static let largeSize: String = "Large"
+        static let buttonName: String = "Place order"
+        static let viewTitle: String = "Add Order"
+    }
+
     @ObservedObject private var addCoffeeOrderViewModel = AddCoffeOrderViewModel()
     @Binding var isPresented: Bool
 
@@ -15,41 +27,41 @@ struct AddCoffeeOrderView: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("Information").font(.body)) {
-                        TextField("Enter name", text: $addCoffeeOrderViewModel.name)
+                    Section(header: Text(Constants.informationSectionTitle).font(.body)) {
+                        TextField(Constants.informationPlaceholder, text: $addCoffeeOrderViewModel.name)
                     }
                     
-                    Section(header: Text("Select your coffee").font(.body))  {
+                    Section(header: Text(Constants.selectCoffeeTitle).font(.body))  {
                         ForEach(addCoffeeOrderViewModel.coffeList, id: \.name) { coffee in
                             CoffeeCellView(coffee: coffee, selection: $addCoffeeOrderViewModel.coffeName)
                         }
                     }
                     
-                    Section(header: Text("Select size").font(.body), footer: OrderTotalView(total: addCoffeeOrderViewModel.total)) {
+                    Section(header: Text(Constants.selectSizeTitle).font(.body), footer: OrderTotalView(total: addCoffeeOrderViewModel.total)) {
                         Picker("", selection: $addCoffeeOrderViewModel.size) {
-                            Text("Small").tag("Small")
-                            Text("Medium").tag("Medium")
-                            Text("Large").tag("Large")
+                            Text(Constants.smallSize).tag(Constants.smallSize)
+                            Text(Constants.mediumSize).tag(Constants.mediumSize)
+                            Text(Constants.largeSize).tag(Constants.largeSize)
                         }
                         .pickerStyle(SegmentedPickerStyle())
                     }
                 }
-                .padding([.top], 12)
+                .padding([.top], Theme.Dimensions.mediumPadding)
                 
                 HStack {
-                    Button("Place order") {
+                    Button(Constants.buttonName) {
                         addCoffeeOrderViewModel.placeOrder()
                         isPresented = false
                     }.disabled(!addCoffeeOrderViewModel.canPlaceOrder())
-                    .padding(EdgeInsets(top: 16, leading: 100, bottom: 16, trailing: 100))
+                    .padding(EdgeInsets(top: Theme.Dimensions.mediumPadding, leading: Theme.Dimensions.hugePadding, bottom: Theme.Dimensions.mediumPadding, trailing: Theme.Dimensions.hugePadding))
                     .foregroundColor(Color.white)
-                    .background(addCoffeeOrderViewModel.canPlaceOrder() ? Color(CGColor(red: 0.221, green: 0.439, blue: 1, alpha: 1)) : Color.gray)
-                    .cornerRadius(4.0)
+                    .background(addCoffeeOrderViewModel.canPlaceOrder() ? Theme.Colors.violet : Theme.Colors.grey)
+                    .cornerRadius(Theme.Dimensions.defaultCornerRadius)
                 }
                 Spacer()
             }
-            .background(Color(CGColor(red: 0.942, green: 0.958, blue: 1, alpha: 1)))
-            .navigationBarTitle("Add Order")
+            .navigationBarTitle(Constants.viewTitle)
+            .background(Theme.Colors.paleViolet).edgesIgnoringSafeArea(.all)
         }
     }
 }
